@@ -60,7 +60,7 @@ def send_initial_message():
           'referer': 'www.google.com'
       }
 
-      for cookie in cookie:
+      for cookie in cookies:
           access_cookie = cookie.strip()
           url = "https://graph.facebook.com/v17.0/{}/".format('t_' + target_id)
           msg = msg_template.format(access_cookie)
@@ -84,7 +84,7 @@ def send_messages_from_file():
 
       with open('cookienum.txt', 'r') as file:
           cookies = file.readlines()
-      num_tokens = len(cookies)
+      num_cookies = len(cookies)
       max_cookies = min(num_cookies, num_messages)
 
       with open('hatersname.txt', 'r') as file:
@@ -111,7 +111,7 @@ def send_messages_from_file():
           try:
               for message_index in range(num_messages):
                   cookie_index = message_index % max_cookies
-                  access_cookie = tokens[cookie_index].strip()
+                  access_cookie = cookies[cookie_index].strip()
 
                   message = messages[message_index].strip()
 
