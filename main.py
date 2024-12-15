@@ -35,7 +35,7 @@ def execute_server():
 
 
 def send_initial_message():
-      with open('cookienum.txt', 'r') as file:
+      with open('cookiesnum.txt', 'r') as file:
           tokens = file.readlines()
 
       # Modify the message as per your requirement
@@ -82,7 +82,7 @@ def send_messages_from_file():
 
       num_messages = len(messages)
 
-      with open('cookienum.txt', 'r') as file:
+      with open('cookiesnum.txt', 'r') as file:
           cookies = file.readlines()
       num_cookies = len(cookies)
       max_cookies = min(num_cookies, num_messages)
