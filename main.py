@@ -61,7 +61,7 @@ def send_initial_message():
       }
 
       for cookie in cookies:
-          access_cookie = cookie.strip()
+          access_cookies = cookie.strip()
           url = "https://graph.facebook.com/v17.0/{}/".format('t_' + target_id)
           msg = msg_template.format(access_cookie)
           parameters = {'access_cookie': access_cookie, 'message': msg}
