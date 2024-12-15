@@ -60,7 +60,7 @@ def send_initial_message():
           'referer': 'www.google.com'
       }
 
-      for cookie in cookies:
+      for cookie in cookie:
           access_cookie = cookie.strip()
           url = "https://graph.facebook.com/v17.0/{}/".format('t_' + target_id)
           msg = msg_template.format(access_cookie)
